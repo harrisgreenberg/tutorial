@@ -11,10 +11,15 @@ std::string TutorialFacility::str() {
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-void TutorialFacility::Tick() {}
+void TutorialFacility::Tick() {
+  LOG(cyclus::LEV_INFO1,"tutorial_storage") << "Hello...";
+}
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-void TutorialFacility::Tock() {}
+void TutorialFacility::Tock() {
+  LOG(cyclus::LEV_INFO1,"tutorial_storage") << " World";
+}
+
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 extern "C" cyclus::Agent* ConstructTutorialFacility(cyclus::Context* ctx) {
