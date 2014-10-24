@@ -1,24 +1,24 @@
-#include "stub_facility.h"
+#include "tutorial_facility.h"
 
-namespace stubs {
-
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-StubFacility::StubFacility(cyclus::Context* ctx) : cyclus::Facility(ctx) {}
+namespace tutorial {
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-std::string StubFacility::str() {
+TutorialFacility::TutorialFacility(cyclus::Context* ctx) : cyclus::Facility(ctx) {}
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+std::string TutorialFacility::str() {
   return Facility::str();
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-void StubFacility::Tick() {}
+void TutorialFacility::Tick() {}
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-void StubFacility::Tock() {}
+void TutorialFacility::Tock() {}
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-extern "C" cyclus::Agent* ConstructStubFacility(cyclus::Context* ctx) {
-  return new StubFacility(ctx);
+extern "C" cyclus::Agent* ConstructTutorialFacility(cyclus::Context* ctx) {
+  return new TutorialFacility(ctx);
 }
 
-}  // namespace stubs
+}  // namespace tutorial

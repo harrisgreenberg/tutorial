@@ -1,19 +1,19 @@
-#include "stub_inst.h"
+#include "tutorial_inst.h"
 
-using stubs::StubInst;
-
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-StubInst::StubInst(cyclus::Context* ctx) : cyclus::Institution(ctx) {}
+using tutorial::TutorialInst;
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-StubInst::~StubInst() {}
+TutorialInst::TutorialInst(cyclus::Context* ctx) : cyclus::Institution(ctx) {}
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-std::string StubInst::str() {
+TutorialInst::~TutorialInst() {}
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+std::string TutorialInst::str() {
   return Institution::str();
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-extern "C" cyclus::Agent* ConstructStubInst(cyclus::Context* ctx) {
-  return new StubInst(ctx);
+extern "C" cyclus::Agent* ConstructTutorialInst(cyclus::Context* ctx) {
+  return new TutorialInst(ctx);
 }

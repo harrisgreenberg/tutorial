@@ -1,19 +1,19 @@
-#include "stub_region.h"
+#include "tutorial_region.h"
 
-using stubs::StubRegion;
-
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-StubRegion::StubRegion(cyclus::Context* ctx) : cyclus::Region(ctx) {}
+using tutorial::TutorialRegion;
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-StubRegion::~StubRegion() {}
+TutorialRegion::TutorialRegion(cyclus::Context* ctx) : cyclus::Region(ctx) {}
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-std::string StubRegion::str() {
+TutorialRegion::~TutorialRegion() {}
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+std::string TutorialRegion::str() {
   return Region::str();
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-extern "C" cyclus::Agent* ConstructStubRegion(cyclus::Context* ctx) {
-  return new StubRegion(ctx);
+extern "C" cyclus::Agent* ConstructTutorialRegion(cyclus::Context* ctx) {
+  return new TutorialRegion(ctx);
 }
